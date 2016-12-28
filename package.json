@@ -1,13 +1,16 @@
 {
     "name": "git-upload",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "gitu MSG = git add . && git commit -m MSG && git push",
+    "keywords":["git", "add", "push", "commit"],
+    "homepage":"https://github.com/yxliang01/git-upload.git",
     "bin": {
         "gitu": "dist/gitu.js"
     },
     "scripts": {
         "build": "babel src --out-dir dist"
     },
+    "bugs":"https://github.com/yxliang01/git-upload/issues",
     "repository": "https://github.com/yxliang01/git-upload.git",
     "author": "Xiao Liang Yu",
     "license": "MIT",
