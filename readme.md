@@ -1,6 +1,8 @@
 Git-Upload
 =====
 
+[![Build Status](https://travis-ci.org/yxliang01/git-upload.svg?branch=master)](https://travis-ci.org/yxliang01/git-upload)
+
 Save your time everyday
 
 To install:
