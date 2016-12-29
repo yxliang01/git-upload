@@ -45,9 +45,10 @@ var CMD = function () {
 }();
 
 new CMD('git', ['add', '.']).execute(function () {
-    new CMD('git', ['commit', '-m', process.argv[2] || '']).execute(function () {
+    new CMD('git', ['commit', '-m', process.argv.slice(2).join(' ')]).execute(function () {
         new CMD('git', ['push']).execute(function () {
             console.log(_colors2.default.green('done!'));
         });
     });
 });
+//# sourceMappingURL=gitu.js.map

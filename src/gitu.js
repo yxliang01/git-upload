@@ -30,7 +30,7 @@ class CMD {
 }
 
 new CMD('git', ['add', '.']).execute(() => {
-    new CMD('git', ['commit', '-m', process.argv[2] || '']).execute(() => {
+    new CMD('git', ['commit', '-m', process.argv.slice(2).join(' ')]).execute(() => {
         new CMD('git', ['push']).execute(()=>{
             console.log(colors.green('done!'));
         });
