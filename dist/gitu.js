@@ -51,4 +51,3 @@ new CMD('git', ['add', '.']).execute(function () {
         });
     });
 });
-//# sourceMappingURL=gitu.js.map
