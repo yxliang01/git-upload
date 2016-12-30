@@ -1,8 +1,9 @@
 {
   "name": "git-upload",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "gitu MSG = git add . && git commit -m MSG && git push",
   "keywords": [
+    "gitu",
     "git",
     "add",
     "push",
@@ -18,6 +19,7 @@
     "publish-please": "publish-please",
     "prepublish": "publish-please guard"
   },
+  "preferGlobal":true,
   "bugs": "https://github.com/yxliang01/git-upload/issues",
   "repository": "https://github.com/yxliang01/git-upload.git",
   "author": "Xiao Liang Yu",
