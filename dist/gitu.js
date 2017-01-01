@@ -9,6 +9,14 @@ var _colors = require("colors");
 
 var _colors2 = _interopRequireDefault(_colors);
 
+var _figlet = require("figlet");
+
+var _figlet2 = _interopRequireDefault(_figlet);
+
+var _assert = require("assert");
+
+var _assert2 = _interopRequireDefault(_assert);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48,6 +56,12 @@ new CMD('git', ['add', '.']).execute(function () {
     new CMD('git', ['commit', '-m', process.argv.slice(2).join(' ')]).execute(function () {
         new CMD('git', ['push']).execute(function () {
             console.log(_colors2.default.green('done!'));
+            (0, _figlet2.default)('200 OK!', function (err, text) {
+                _assert2.default.ifError(err);
+
+                console.log(text);
+            });
         });
     });
 });
+//# sourceMappingURL=gitu.js.map

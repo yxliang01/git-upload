@@ -19,7 +19,7 @@
     "publish-please": "publish-please",
     "prepublish": "publish-please guard"
   },
-  "preferGlobal":true,
+  "preferGlobal": true,
   "bugs": "https://github.com/yxliang01/git-upload/issues",
   "repository": "https://github.com/yxliang01/git-upload.git",
   "author": "Xiao Liang Yu",
@@ -31,6 +31,8 @@
     "publish-please": "^2.2.0"
   },
   "dependencies": {
-    "colors": "^1.1.2"
+    "assert": "^1.4.1",
+    "colors": "^1.1.2",
+    "figlet": "^1.2.0"
   }
 }

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import {spawn} from "child_process";
 import colors from "colors";
+import figlet from 'figlet';
+import assert from 'assert';
 
 class CMD {
 
@@ -33,6 +35,11 @@ new CMD('git', ['add', '.']).execute(() => {
     new CMD('git', ['commit', '-m', process.argv.slice(2).join(' ')]).execute(() => {
         new CMD('git', ['push']).execute(()=>{
             console.log(colors.green('done!'));
+            figlet('200 OK!', (err, text)=>{
+                assert.ifError(err);
+
+                console.log(text);
+            });
         });
     });
 });
