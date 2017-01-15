@@ -1,6 +1,6 @@
 {
   "name": "git-upload",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "gitu MSG = git add . && git commit -m MSG && git push",
   "keywords": [
     "gitu",
