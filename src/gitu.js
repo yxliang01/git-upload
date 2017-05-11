@@ -4,6 +4,8 @@ import colors from "colors";
 import figlet from 'figlet';
 import assert from 'assert';
 
+const DEFAULT_COMMIT_MSG = "Committed with Git-Upload";
+
 class CMD {
 
     constructor(path, args) {
@@ -32,7 +34,11 @@ class CMD {
 }
 
 new CMD('git', ['add', '.']).execute(() => {
-    new CMD('git', ['commit', '-m', process.argv.slice(2).join(' ')]).execute(() => {
+    let commitMsg = process.argv.slice(2).join(' ');
+    if(commitMsg.length === 0) {
+        commitMsg = DEFAULT_COMMIT_MSG;
+    }
+    new CMD('git', ['commit', '-m', commitMsg]).execute(() => {
         new CMD('git', ['push']).execute(()=>{
             console.log(colors.green('done!'));
             figlet('200 OK!', (err, text)=>{

@@ -11,6 +11,8 @@ Save your time everyday
 
 Git-Upload saves your time by removing the need to type three most common git modification upload commands `git add .`, `git commit` and `git push`
 
+If you are just too lazy or you really don't need commit message, you can just call `gitu`.
+
 To install:
 ```bash
 npm install -g git-upload

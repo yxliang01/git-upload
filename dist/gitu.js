@@ -21,6 +21,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var DEFAULT_COMMIT_MSG = "Committed with Git-Upload";
+
 var CMD = function () {
     function CMD(path, args) {
         _classCallCheck(this, CMD);
@@ -53,7 +55,11 @@ var CMD = function () {
 }();
 
 new CMD('git', ['add', '.']).execute(function () {
-    new CMD('git', ['commit', '-m', process.argv.slice(2).join(' ')]).execute(function () {
+    var commitMsg = process.argv.slice(2).join(' ');
+    if (commitMsg.length === 0) {
+        commitMsg = DEFAULT_COMMIT_MSG;
+    }
+    new CMD('git', ['commit', '-m', commitMsg]).execute(function () {
         new CMD('git', ['push']).execute(function () {
             console.log(_colors2.default.green('done!'));
             (0, _figlet2.default)('200 OK!', function (err, text) {
@@ -64,3 +70,4 @@ new CMD('git', ['add', '.']).execute(function () {
         });
     });
 });
+//# sourceMappingURL=gitu.js.map
