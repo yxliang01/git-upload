@@ -58,6 +58,7 @@ new CMD('git', ['add', '.']).execute(function () {
     var commitMsg = process.argv.slice(2).join(' ');
     if (commitMsg.length === 0) {
         commitMsg = DEFAULT_COMMIT_MSG;
+        console.log(_colors2.default.yellow('Using default commit message'));
     }
     new CMD('git', ['commit', '-m', commitMsg]).execute(function () {
         new CMD('git', ['push']).execute(function () {

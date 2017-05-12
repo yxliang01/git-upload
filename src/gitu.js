@@ -37,6 +37,7 @@ new CMD('git', ['add', '.']).execute(() => {
     let commitMsg = process.argv.slice(2).join(' ');
     if(commitMsg.length === 0) {
         commitMsg = DEFAULT_COMMIT_MSG;
+        console.log(colors.yellow('Using default commit message'));
     }
     new CMD('git', ['commit', '-m', commitMsg]).execute(() => {
         new CMD('git', ['push']).execute(()=>{
