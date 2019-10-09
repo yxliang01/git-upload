@@ -1,11 +1,10 @@
-Git-Upload
-=====
-
 [![Build Status](https://travis-ci.org/yxliang01/git-upload.svg?branch=master)](https://travis-ci.org/yxliang01/git-upload)
 [![Dependency Status](https://david-dm.org/yxliang01/git-upload.svg)]()
 [![Code Climate](https://codeclimate.com/github/yxliang01/git-upload/badges/gpa.svg)](https://codeclimate.com/github/yxliang01/git-upload)
-[![NSP Status](https://nodesecurity.io/orgs/git-upload/projects/1cee5cb2-7bd7-4909-b25b-6cb6634e75f3/badge)](https://nodesecurity.io/orgs/git-upload/projects/1cee5cb2-7bd7-4909-b25b-6cb6634e75f3)
 [![npm version](https://badge.fury.io/js/git-upload.svg)](https://badge.fury.io/js/git-upload)
+
+Git-Upload
+=====
 
 Save your time everyday
 
